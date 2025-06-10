@@ -350,6 +350,14 @@ public class Avion
                 ocupadasVentanaEconomica++;
             }
         }
+        
+        if (ocupadasVentanaEjecutiva > ocupadasVentanaEconomica) {
+            return "Ejecutiva";
+        } else if (ocupadasVentanaEconomica > ocupadasVentanaEjecutiva) {
+            return "Económica";
+        } else {
+            return "Empate";
+        }
     }
 
     /**
