@@ -366,7 +366,14 @@ public class Avion
      */
     public String metodo2( )
     {
-        return "Respuesta 2";
+    	    // Se recorre el arreglo buscando una silla libre en la ventana
+            for (Silla silla : sillasEconomicas) {
+                if (silla.darUbicacion() == Ubicacion.VENTANA && !silla.sillaAsignada()) {
+                    return "Hay al menos una silla económica libre en la ventana";
+                }
+            }
+            return "No hay sillas económicas libres en la ventana";
+        }
     }
 
 }
