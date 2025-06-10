@@ -333,9 +333,16 @@ public class Avion
      * Método para la extensión 1.
      * @return Respuesta 1.
      */
-    public String metodo1( )
-    {
-        return "Respuesta 1";
+    public String metodo1( ){
+    	int ocupadasVentanaEjecutiva = 0;
+        int ocupadasVentanaEconomica = 0;
+
+        // Se cuenta cuántas sillas ocupadas hay en la ventana en clase ejecutiva
+        for (Silla silla : sillasEjecutivas) {
+            if (silla.darUbicacion() == Ubicacion.VENTANA && silla.sillaAsignada()) {
+                ocupadasVentanaEjecutiva++;
+            }
+        }
     }
 
     /**
