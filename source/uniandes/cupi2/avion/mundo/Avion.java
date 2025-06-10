@@ -343,6 +343,13 @@ public class Avion
                 ocupadasVentanaEjecutiva++;
             }
         }
+        
+     // Se cuenta cuántas sillas ocupadas hay en la ventana en clase económica
+        for (Silla silla : sillasEconomicas) {
+            if (silla.darUbicacion() == Ubicacion.VENTANA && silla.sillaAsignada()) {
+                ocupadasVentanaEconomica++;
+            }
+        }
     }
 
     /**
